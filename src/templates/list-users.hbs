@@ -1,0 +1,25 @@
+<div class="row">
+  {{#each this}}
+  {{#if_even @index}}
+    <div class="hexagon" data-id="{{id}}">
+  {{else}}
+    <div class="hexagon even" data-id="{{id}}">
+  {{/if_even}} 
+    <div class="outer">
+      <div class="inner user-name">
+        <img src="{{img}}" alt="">
+        <div class="text-outer">{{name}}</div>
+        <div class="textWrapper">
+          <div class="text-inner">{{name}}
+            <div class="text-sub">Hobby: {{hobby}}</div><br>
+            <div>
+              <a href="#/user/{{id}}/edit">Edit</a>
+              <a href="#/user/{{id}}/delete" class="warning">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  {{/each}}      
+</div>
